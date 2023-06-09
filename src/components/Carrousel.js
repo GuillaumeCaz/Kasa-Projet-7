@@ -1,75 +1,58 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import leftArrowImage from '../assets/Arrow/ArrowLeft.png';
+import rightArrowImage from '../assets/Arrow/ArrowRight.png';
 import data from '../datas/datas.json';
-import arrowLeftImage from '../assets/Arrow/ArrowLeft.png';
-import arrowRightImage from '../assets/Arrow/ArrowRight.png';
 import '../styles/Carrousel.css';
 
 const Carrousel = () => {
-  const { id } = useParams(); // Récupère l'ID de l'URL
-  const [images, setImages] = useState([]);
+  const { id } = useParams();
+  const logement = data.find((log) => log.id === id);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    // Récupérer les images du logement correspondant à l'ID
-    const logement = data.find((log) => log.id === id);
-    if (logement) {
-      const pictures = logement.pictures.map((picture, index) => ({
-        id: index + 1,
-        src: picture,
-      }));
-      setImages(pictures);
-    }
-  }, [id]);
+  if (!logement) {
+    return null; // Affichez un message ou un indicateur de chargement approprié si le logement n'est pas trouvé
+  }
 
-  const handleSlideChange = (index) => {
-    setCurrentIndex(index);
-  };
+  const pictures = logement.pictures;
 
   const previousImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
   };
 
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
-    <div className="carousel-wrapper">
-      {images.length > 1 && (
-        <>
-          <div className="carousel-arrow left" onClick={previousImage}>
-            <img src={arrowLeftImage} alt="Left Arrow" />
-          </div>
-          <div className="carousel-arrow right" onClick={nextImage}>
-            <img src={arrowRightImage} alt="Right Arrow" />
-          </div>
-        </>
-      )}
+    <div className="carrousel-container">
       <Carousel
+        showIndicators={false}
         showArrows={false}
+        showStatus={false}
         showThumbs={false}
         selectedItem={currentIndex}
-        onChange={handleSlideChange}
-        renderIndicator={(onClickHandler, isSelected, index, label) => (
-          <button
-            type="button"
-            onClick={onClickHandler}
-            key={index}
-            className={`${isSelected ? 'carousel-indicator selected' : 'carousel-indicator'}`}
-          >
-            {index + 1}/{images.length}
-          </button>
-        )}
+        onChange={setCurrentIndex}
       >
-        {images.map((image) => (
-          <div key={image.id} className="slide">
-            <img src={image.src} alt={` ${image.id}`} />
+        {pictures.map((picture, index) => (
+          <div key={index}>
+            <img src={picture} alt={`${index + 1}`} className="carrousel-image" />
           </div>
         ))}
       </Carousel>
+      {pictures.length > 1 && (
+        <div className="arrows-container">
+          <img src={leftArrowImage} alt="Previous" className="arrow left-arrow" onClick={previousImage} />
+          <img src={rightArrowImage} alt="Next" className="arrow right-arrow" onClick={nextImage} />
+        </div>
+      )}
+      {pictures.length > 0 && (
+        <div className="counter">
+          {currentIndex + 1}/{pictures.length}
+        </div>
+      )}
     </div>
   );
 };
