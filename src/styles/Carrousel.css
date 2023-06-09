@@ -1,0 +1,62 @@
+.carousel-wrapper {
+    position: relative;
+    margin: 100px;
+  }
+  
+  .carousel-wrapper .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .carousel-wrapper .carousel-arrow.left {
+    left: 0;
+    background-image: url('../assets/Arrow/ArrowLeft.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .carousel-wrapper .carousel-arrow.right {
+    right: 0;
+    background-image: url('../assets/Arrow/ArrowRight.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .carousel-wrapper .carousel {
+    height: 415px;
+  }
+  
+  .carousel-wrapper .carousel .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .carousel-wrapper .carousel .slide img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .carousel-wrapper .carousel .carousel-indicator {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-wrapper .carousel .carousel-indicator.selected {
+    background-color: rgba(0, 0, 0, 0.7);
+  }

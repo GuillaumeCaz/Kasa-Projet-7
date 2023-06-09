@@ -1,0 +1,28 @@
+.location-list-container {
+  margin: 40px 100px;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+}
+
+.location-card {
+  margin: 2%;
+}
+
+@media (max-width: 812px) {
+  .location-list-container {
+    background-color: transparent;
+    margin: 0px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .location-card {
+    margin: 20px;
+    height:255px;
+  }
+}
