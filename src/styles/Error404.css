@@ -1,0 +1,24 @@
+.corps{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.error404{
+    display: flex;
+    align-self: center;    
+    width: 597px;
+    margin:150px 0 66px 0;
+}
+.errortxt{
+    text-align: center;
+    font-size: 36px;
+    margin:0px;
+}
+.Lien{
+    text-align: center;
+    margin:159px 0 ;
+    text-decoration: underline;
+    font-size: 18px;
+}
