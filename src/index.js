@@ -11,16 +11,14 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/fiche-logement/:id" element={<FicheLogement />} /> {/* Utilisez le chemin en minuscules et sans majuscules */}
-        <Route path="/error404" element={<Error404 />} /> {/* Utilisez un chemin en minuscules */}
-        <Route path="/a-propos" element={<APropos />} /> {/* Utilisez un chemin en minuscules et des tirets */}
-        <Route path="*" element={<Error404 />} /> {/* Cette route sert de gestionnaire d'erreur pour toutes les autres routes */}
+        <Route path="/fiche-logement/:id" element={<FicheLogement />} />
+        <Route path="/APropos" element={<APropos />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
 
 
 
