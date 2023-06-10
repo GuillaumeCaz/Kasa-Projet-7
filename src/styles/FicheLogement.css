@@ -1,0 +1,10 @@
+.doubleDropDown{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-around;
+}
+.dropdown{
+    width:35%;
+    border-radius: 5px;
+}

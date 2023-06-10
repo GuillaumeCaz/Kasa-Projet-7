@@ -1,0 +1,127 @@
+.cadreInfos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding:50px 100px;
+  }
+  
+  .title_logement {
+    align-self: flex-start;
+    margin:0;
+    width:75%;
+    
+  }
+  .enonce_logement{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    margin:0;
+  }
+  .adresse{
+    font-size: 18px;
+  }
+  
+  .owner {
+    display: flex;
+    justify-content: flex-end;
+    width:25%;
+    align-self: center;
+    
+  }
+  .name_owner{
+    align-self: center;
+    width:min-content;
+    margin:0px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+  }
+  .id_owner{
+    width:64px;
+    border-radius: 100px;
+  }
+  .tag{
+    background-color: var(--button-underline-color);
+    color:white;
+    margin:10px 15px 10px 0px;
+    text-align: center;
+    line-height: 25px;
+    padding:0 25px;
+    height:25px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .star{
+    margin-right: 15px;
+    width: 24px;
+  }
+  .attributs {
+    display: flex;
+    flex-wrap: wrap;
+    width:75%;
+    align-self: center;
+    
+  }
+  
+  .note {
+    display:flex;
+    justify-content: end;
+    width:25%;
+    align-self: center;
+    
+  }
+  @media (max-width: 812px) {
+    .cadreInfos {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      margin:20px;
+    }
+  
+    .title_logement {
+      
+    }
+    .enonce_logement{ 
+        font-size: 18px;
+      }
+      .adresse{
+        font-size: 14px;
+      }
+    .attributs {
+      width: 100%;
+      order: 1;
+      margin-bottom: 30px;
+    }
+    .tag{
+        padding:0 20px;
+        height:20px;
+        font-size: 10px;
+        line-height: 21px;
+      }
+    .note {
+    position:relative;
+    bottom:28px;
+      justify-content: start;
+      align-self: flex-start;
+      order: 3;
+    }
+  
+    .owner {
+      align-self: flex-end;  
+      order: 2;
+      margin-right: 20px;
+    }
+    .id_owner{
+        height:auto;
+        width: 32px;
+        border-radius: 100px;
+        object-fit: contain;
+        max-width: 100%;
+    }
+    .name_owner{
+        font-size: 12px;
+      }
+  }
