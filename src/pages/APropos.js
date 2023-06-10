@@ -12,7 +12,7 @@ const Apropos = () => {
   return (
     <Layout>
       <div className='apropos'>     
-        <img className="montagne" src={image} alt="Image" />
+        <img className="montagne" src={image} alt="montagne" />
         <DropDown title="Fiabilité" content={dropdown1Content} className="dropdownAPropos" />
         <DropDown title="Respect" content={dropdown2Content} className="dropdownAPropos" />
         <DropDown title="Service" content={dropdown3Content} className="dropdownAPropos" />

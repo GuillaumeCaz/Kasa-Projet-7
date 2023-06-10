@@ -29,6 +29,7 @@ const FicheLogement = () => {
       <CadreInfos />
       <div className="doubleDropDown">
         <DropDown title="Description" content={dropdown1Content} className="dropdown" />
+        <div className="separation"></div>  
         <DropDown title="Équipements" content={dropdown2Content} className="dropdown" />
       </div>
     </Layout>

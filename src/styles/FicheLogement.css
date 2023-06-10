@@ -1,20 +1,23 @@
 .doubleDropDown{
     display:flex;
     flex-direction: row;
-    width:100%;
     justify-content: space-around;
-    margin-bottom: 50px;
+    margin:20px 100px;
 }
 .dropdown{
-    width:35%;
+    width:100%;
     border-radius: 5px;
+    
+}
+.separation{
+    width:76px;
 }
 @media (max-width: 812px) {
 
     .doubleDropDown{
         display:flex;
         flex-direction: column;
-       
+        margin:20px;
     }
     .dropdown{
         width:100%;
@@ -22,4 +25,8 @@
         margin-bottom: 50px;
         
     }
+    .separation{
+        width:0px;
+    }
+
 }
