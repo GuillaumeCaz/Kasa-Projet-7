@@ -120,4 +120,8 @@
     .name_owner{
         font-size: 12px;
       }
+    .star{
+        margin-right: 5px;
+        width: 13px;
+    }
   }

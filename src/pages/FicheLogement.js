@@ -14,26 +14,28 @@ const FicheLogement = () => {
 
   const logement = data.find((log) => log.id === id);
 
-  const dropdown1Content = logement.description;
-  const dropdown2Content = logement.equipments;
+  const dropdown1Content = logement?.description;
+  const dropdown2Content = logement?.equipments;
 
   if (!logement) {
     // Redirect to Error404 if the logement is not found
-    navigate('/error404');
+    navigate('/404');
     return <Error404 />;
+  } else {
+    return (
+      <Layout>
+        <Carrousel />
+        <CadreInfos />
+        <div className="doubleDropDown">
+          <DropDown title="Description" content={dropdown1Content} className="dropdown" />
+          <div className="separation"></div>  
+          <DropDown title="Équipements" content={dropdown2Content} className="dropdown" />
+        </div>
+      </Layout>
+    );
   }
 
-  return (
-    <Layout>
-      <Carrousel />
-      <CadreInfos />
-      <div className="doubleDropDown">
-        <DropDown title="Description" content={dropdown1Content} className="dropdown" />
-        <div className="separation"></div>  
-        <DropDown title="Équipements" content={dropdown2Content} className="dropdown" />
-      </div>
-    </Layout>
-  );
+  
 };
 
 export default FicheLogement;

@@ -4,12 +4,23 @@
   overflow: hidden;
   border-radius: 25px;
   margin: 0 100px;
+  
 }
-.carrousel-image {
-  width: 100%;
-  height: 100%;
-  transform: translateY(-20%);
+.carousel-root{
+  height:100%;
 }
+.carousel-slider{
+  height:100%;
+}
+.slider-wrapper{
+  height:100%;
+}
+.slider{
+  object-fit: cover ;
+  object-position: center;
+  height:100%;
+}
+
 .left-arrow,
 .right-arrow {
   position: absolute;
@@ -40,12 +51,10 @@
     height: 255px;
     margin: 20px 20px;
   }
-  .carrousel-image {
-    transform: translateY(0%);
-  }
+  
   .left-arrow,
   .right-arrow {
-    top: 45%;
+    top: 50%;
     width: 20px;
     height: 20px;
   }
