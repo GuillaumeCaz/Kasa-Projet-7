@@ -1,6 +1,6 @@
-import React from 'react';
-import wallpaperImage from '../assets/WallPaper/wallpaper.png';
-import '../styles/WallPaper.css';
+import React from "react";
+import wallpaperImage from "../assets/WallPaper/wallpaper.png";
+import "../styles/WallPaper.css";
 
 const WallPaper = () => {
   return (

@@ -1,8 +1,8 @@
-import React from 'react';
-import '../styles/home.css';
-import Layout from '../components/Layout';
-import WallPaper from '../components/WallPaper';
-import LocationList from '../components/LocationList';
+import React from "react";
+import "../styles/home.css";
+import Layout from "../components/Layout";
+import WallPaper from "../components/WallPaper";
+import LocationList from "../components/LocationList";
 
 const Home = () => {
   return (

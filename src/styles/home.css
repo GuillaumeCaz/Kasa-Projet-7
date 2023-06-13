@@ -1,19 +1,12 @@
 :root {
-  --button-underline-color: #FF6060; 
-  font-family: 'montserrat', sans-serif;
-  color:#FF6060;
+  --button-underline-color: #ff6060;
+  font-family: "montserrat", sans-serif;
+  color: #ff6060;
   background-color: white;
   font-weight: 500;
-  
 }
 
-
-a{
+a {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
-
-
-
-
-

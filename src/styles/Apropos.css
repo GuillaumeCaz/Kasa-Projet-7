@@ -1,23 +1,23 @@
-.apropos{
-    margin:30px 100px;
+.apropos {
+  margin: 30px 100px;
 }
-.montagne{
-    height: 223px;
-    object-fit: cover;
-    width:100%;
-    mix-blend-mode: darken;
-    
-    border-radius: 25px;    
+.montagne {
+  height: 223px;
+  object-fit: cover;
+  width: 100%;
+  mix-blend-mode: darken;
+
+  border-radius: 25px;
 }
-.dropdownAPropos{
-    margin:30px 108px 0 108px;
+.dropdownAPropos {
+  margin: 30px 108px 0 108px;
 }
 
 @media (max-width: 812px) {
-    .apropos{
-        margin:30px 20px;
-    }
-    .dropdownAPropos{
-        margin:30px 0px 0 0px;
-    }
+  .apropos {
+    margin: 30px 20px;
+  }
+  .dropdownAPropos {
+    margin: 30px 0px 0 0px;
+  }
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import data from '../datas/datas.json';
-import starImage from '../assets/Stars/Star.png';
-import emptyStarImage from '../assets/Stars/EmptyStar.png';
-import '../styles/CadreInfos.css';
+import React from "react";
+import { useParams } from "react-router-dom";
+import data from "../datas/datas.json";
+import starImage from "../assets/Stars/Star.png";
+import emptyStarImage from "../assets/Stars/EmptyStar.png";
+import "../styles/CadreInfos.css";
 
 const CadreInfos = () => {
   const { id } = useParams(); // Récupère l'ID de l'URL
@@ -40,7 +40,9 @@ const CadreInfos = () => {
       </div>
       <div className="attributs">
         {tags.map((tag, index) => (
-          <div key={index} className="tag">{tag}</div>
+          <div key={index} className="tag">
+            {tag}
+          </div>
         ))}
       </div>
       <div className="note">
