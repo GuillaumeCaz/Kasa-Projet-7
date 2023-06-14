@@ -41,7 +41,7 @@ const Carrousel = () => {
         onChange={setCurrentIndex}
       >
         {pictures.map((picture, index) => (
-          <div key={index}>
+          <div className="image-container" key={index}>
             <img
               src={picture}
               alt={`${index + 1}`}
