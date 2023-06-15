@@ -13,7 +13,7 @@ const Carrousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   if (!logement) {
-    return null; // Affichez un message ou un indicateur de chargement approprié si le logement n'est pas trouvé
+    return null; 
   }
 
   const pictures = logement.pictures;
@@ -66,7 +66,7 @@ const Carrousel = () => {
           />
         </div>
       )}
-      {pictures.length > 0 && (
+      {pictures.length > 1 && (
         <div className="counter">
           {currentIndex + 1}/{pictures.length}
         </div>
